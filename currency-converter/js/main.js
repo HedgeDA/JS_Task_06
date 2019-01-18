@@ -1,4 +1,4 @@
-var xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
 xhr.addEventListener("load", onLoad);
 
 let content;
@@ -23,7 +23,7 @@ function onLoad() {
 
   fromCurrency.innerHTML = currency.reduce((innerHTML, item) => {
     return innerHTML + `<option id="${item.code}" value="${item.value}">${item.title}</option>`;
-  }, '')
+  }, '');
 
   toCurrency.innerHTML = fromCurrency.innerHTML;
 
@@ -31,7 +31,7 @@ function onLoad() {
   content.classList.remove('hidden');
 }
 
-function calculateResult(event) {
+function calculateResult() {
   result.value = 0;
   if (toCurrency.value !== 0) {
     result.value = ((Number(source.value) * Number(fromCurrency.value)) / Number(toCurrency.value)).toFixed(2);
