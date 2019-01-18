@@ -7,10 +7,10 @@ function inputCahnge(event) {
     listBlock.getElementsByTagName('output')[0].value--
   }
 
-  if (listBlock.getElementsByTagName('output')[0].value == 4) {
-    listBlock.getElementsByTagName('h3')[0].classList.add('complete');
-  } else {
+  if (listBlock.getElementsByTagName('output')[0].value < 4) {
     listBlock.getElementsByTagName('h3')[0].classList.remove('complete');
+  } else {
+    listBlock.getElementsByTagName('h3')[0].classList.add('complete');
   }
 }
 
