@@ -32,8 +32,13 @@ function zipKeydown(event) {
 function hideForm(event) {
   event.preventDefault();
 
-  for (var key in formData) {
+  for (let key in formData) {
+    if (!formData.hasOwnProperty(key)) {
+      continue;
+    }
+
     let element = document.getElementById(key);
+
     if (element != null) {
       element.value = formData[key];
     }
