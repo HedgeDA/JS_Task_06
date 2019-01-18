@@ -8,9 +8,9 @@ function inputChange(event) {
   }
 
   if (listBlock.getElementsByTagName('output')[0].value < 4) {
-    listBlock.getElementsByTagName('h3')[0].classList.remove('complete');
+    listBlock.classList.remove('complete');
   } else {
-    listBlock.getElementsByTagName('h3')[0].classList.add('complete');
+    listBlock.classList.add('complete');
   }
 }
 
