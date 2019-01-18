@@ -1,6 +1,6 @@
 let listBlock;
 
-function inputCahnge(event) {
+function inputChange(event) {
   if (event.target.checked) {
     listBlock.getElementsByTagName('output')[0].value++
   } else {
@@ -22,7 +22,7 @@ function init() {
   for (let input of listBlock.getElementsByTagName('input')) {
     input.checked = false;
 
-    input.addEventListener('change', inputCahnge);
+    input.addEventListener('change', inputChange);
   }
 }
 
